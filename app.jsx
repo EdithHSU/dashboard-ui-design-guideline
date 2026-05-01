@@ -1,4 +1,4 @@
-// Main app — 臺鐵雲系統介面 設計規範閱覽平台
+// Main app — 鐵路雲系統介面 設計規範閱覽平台
 const { useState, useMemo, useEffect } = React;
 
 // ─── Data ───
@@ -89,7 +89,7 @@ const SPACING = [
 ];
 
 const TYPE_HEAD = [
-  { name: "標題文字 H1", weight: "Bold 700", size: "32px", lh: "1", preview: "臺鐵雲平台" },
+  { name: "標題文字 H1", weight: "Bold 700", size: "32px", lh: "1", preview: "鐵路雲平台" },
   { name: "標題文字 H3", weight: "Regular 400", size: "40px", lh: "1.2", preview: "標題文字" },
   { name: "標題文字 H4", weight: "Regular 400", size: "18px", lh: "1", preview: "說明文字" },
   { name: "副標題文字 1", weight: "Bold 700", size: "24px", lh: "1", preview: "副標題" },
@@ -135,7 +135,7 @@ function Sidebar({ active, onNav }) {
         <div className="logo">
           <div className="logo-mark">TR</div>
           <div>
-            <div className="name">臺鐵雲平台</div>
+            <div className="name">鐵路雲平台</div>
             <div className="ver">DESIGN GUIDELINE · v2.0</div>
           </div>
         </div>
@@ -237,7 +237,7 @@ function Overview({ onNav }) {
         <div>
           <span className="meta-pill">VERSION 2.0 · 2026</span>
           <h1>系統介面設計規範<span className="h1-en">Design Guideline</span></h1>
-          <p>本文件定義臺鐵雲平台介面的視覺語言與互動規則 — 涵蓋顏色、字體、間距、網格與互動狀態，協助設計師與工程師建立一致、可預期、易於維護的產品體驗。</p>
+          <p>本文件定義鐵路雲平台介面的視覺語言與互動規則 — 涵蓋顏色、字體、間距、網格與互動狀態，協助設計師與工程師建立一致、可預期、易於維護的產品體驗。</p>
         </div>
       </div>
 
@@ -485,18 +485,18 @@ function TypePage() {
         <div className="specimen-grid">
           <div className="specimen">
             <div className="meta">Noto Sans TC · Bold</div>
-            <div className="display weight-bold">臺鐵雲平台</div>
-            <p className="desc">國營臺灣鐵路股份有限公司，通稱臺鐵公司，是臺灣鐵路的營運機構。</p>
+            <div className="display weight-bold">鐵路雲平台</div>
+            <p className="desc">國營臺灣鐵路股份有限公司，通稱鐵路公司，是臺灣鐵路的營運機構。</p>
           </div>
           <div className="specimen">
             <div className="meta">Noto Sans TC · Regular</div>
-            <div className="display weight-reg">臺鐵雲平台</div>
-            <p className="desc">國營臺灣鐵路股份有限公司，通稱臺鐵公司，是臺灣鐵路的營運機構。</p>
+            <div className="display weight-reg">鐵路雲平台</div>
+            <p className="desc">國營臺灣鐵路股份有限公司，通稱鐵路公司，是臺灣鐵路的營運機構。</p>
           </div>
           <div className="specimen">
             <div className="meta">Noto Sans TC · Light</div>
-            <div className="display weight-light">臺鐵雲平台</div>
-            <p className="desc">國營臺灣鐵路股份有限公司，通稱臺鐵公司，是臺灣鐵路的營運機構。</p>
+            <div className="display weight-light">鐵路雲平台</div>
+            <p className="desc">國營臺灣鐵路股份有限公司，通稱鐵路公司，是臺灣鐵路的營運機構。</p>
           </div>
         </div>
 
@@ -648,7 +648,7 @@ function GridPage() {
       </div>
 
       <div className="section">
-        <SectionHead zh="斷點" en="Breakpoints" sub="響應式斷點對應臺鐵雲平台主要的桌面與平板使用情境。" />
+        <SectionHead zh="斷點" en="Breakpoints" sub="響應式斷點對應鐵路雲平台主要的桌面與平板使用情境。" />
         <div className="type-table">
           <div className="type-row head">
             <span>名稱</span><span>裝置</span><span>最小寬</span><span>欄位</span><span>邊距</span>
