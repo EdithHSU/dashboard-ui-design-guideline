@@ -1,0 +1,46 @@
+@use "vars" as *;
+@use "mixins" as *;
+
+/* ───────── Spacing ───────── */
+.spacing-table {
+  @include surface(10px);
+  overflow: hidden;
+}
+
+.spacing-row {
+  display: grid;
+  grid-template-columns: 240px 1fr 120px;
+  align-items: center;
+  padding: 18px 28px;
+  border-bottom: 1px solid $border-card;
+
+  &:last-child { border-bottom: 0; }
+
+  &.head {
+    background: var(--mono-surface-2);
+    color: var(--neutral-300);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 12px 28px;
+    text-transform: uppercase;
+    font-family: var(--font-en);
+  }
+
+  .size {
+    font-family: var(--font-en);
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .delta {
+    font-family: var(--font-en);
+    color: var(--neutral-200);
+    font-size: 13px;
+  }
+}
+
+.spacing-bar {
+  background: var(--secondary-500);
+  height: 24px;
+  border-radius: 2px;
+}

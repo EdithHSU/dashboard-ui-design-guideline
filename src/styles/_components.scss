@@ -1,0 +1,97 @@
+@use "vars" as *;
+@use "mixins" as *;
+
+/* ───────── Component preview area ───────── */
+.preview {
+  @include surface(12px);
+  padding: 40px;
+  margin-top: 16px;
+}
+
+.preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-tc);
+  transition: all 0.15s;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &-primary {
+    background: var(--primary-400);
+    color: #1a1a1a;
+    &:hover { background: var(--primary-300); }
+  }
+
+  &-secondary {
+    background: transparent;
+    border-color: var(--primary-400);
+    color: var(--primary-300);
+    &:hover { background: rgba($c-primary, 0.08); }
+  }
+
+  &-text {
+    color: var(--primary-300);
+    padding: 10px 12px;
+    &:hover { color: var(--primary-200); }
+  }
+
+  &-disabled { background: var(--disabled-400); color: #fff; cursor: not-allowed; opacity: 0.8; }
+}
+
+/* form */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 320px;
+
+  label { font-size: 13px; color: var(--neutral-200); }
+
+  input, select {
+    background: var(--mono-surface-2);
+    border: 1px solid $border-card;
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: #fff;
+    font-family: var(--font-tc);
+    font-size: 14px;
+    outline: none;
+  }
+
+  input:focus { border-color: var(--primary-400); box-shadow: 0 0 0 3px rgba($c-primary, 0.15); }
+}
+
+/* badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: $radius-pill;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-en);
+
+  &::before {
+    content: "";
+    @include dot(6px, currentColor);
+  }
+
+  &-success { background: rgba($c-success, 0.15); color: var(--success-400); }
+  &-warn { background: rgba($c-warning, 0.12); color: var(--warning-400); }
+  &-error { background: rgba($c-error, 0.12); color: var(--error-400); }
+  &-info { background: rgba($c-info, 0.18); color: #6CB7E0; }
+  &-disabled { background: rgba($c-disabled, 0.18); color: var(--disabled-400); }
+}

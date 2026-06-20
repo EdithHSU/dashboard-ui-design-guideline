@@ -1,0 +1,84 @@
+@use "vars" as *;
+@use "mixins" as *;
+
+/* ───────── Type specimens ───────── */
+.specimen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.specimen {
+  @include surface(10px);
+  padding: 28px 24px;
+
+  .meta {
+    font-size: 11px;
+    font-family: var(--font-en);
+    color: var(--neutral-300);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .display {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+
+  .glyphs {
+    font-family: var(--font-en);
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--neutral-200);
+    letter-spacing: 0.02em;
+    word-break: break-all;
+  }
+
+  .desc {
+    font-size: 13px;
+    color: var(--neutral-200);
+    line-height: 1.7;
+    margin: 0 0 12px;
+  }
+}
+
+.weight-bold { font-weight: 700; }
+.weight-reg { font-weight: 400; }
+.weight-light { font-weight: 300; }
+
+/* type scale table */
+.type-table {
+  @include surface(10px);
+  overflow: hidden;
+}
+
+.type-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1.2fr 110px 110px 110px;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid $border-card;
+  font-family: var(--font-en);
+
+  &:last-child { border-bottom: 0; }
+
+  &.head {
+    background: var(--mono-surface-2);
+    color: var(--neutral-300);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+  }
+
+  .preview {
+    font-family: var(--font-tc);
+    color: #fff;
+  }
+
+  .name { font-family: var(--font-tc); color: var(--neutral-200); font-size: 13px; }
+  .val { color: var(--neutral-200); font-size: 13px; }
+}

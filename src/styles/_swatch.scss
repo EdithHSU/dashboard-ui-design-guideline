@@ -1,0 +1,58 @@
+@use "mixins" as *;
+
+/* ───────── Swatch grid ───────── */
+.swatch-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 13px;
+
+  &.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 540px; }
+  &.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 360px; }
+  &.cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  &.wrap { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+}
+
+.swatch {
+  position: relative;
+  border-radius: 8px;
+  padding: 14px 16px;
+  height: 110px;
+  @include stack-between;
+  box-shadow: 0 4px 6px -2px rgba(16, 24, 40, 0.05);
+  font-family: var(--font-en);
+  cursor: copy;
+  transition: transform 0.15s;
+  overflow: hidden;
+
+  &:hover { transform: translateY(-2px); }
+
+  &::after {
+    content: "Copy";
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    opacity: 0;
+    transition: opacity 0.15s;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover::after { opacity: 0.85; }
+  &.copied::after { content: "Copied!"; opacity: 1; background: rgba(255, 255, 255, 0.18); }
+
+  .label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .hex {
+    font-size: 13px;
+    text-align: right;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+}

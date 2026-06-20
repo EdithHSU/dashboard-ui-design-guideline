@@ -1,0 +1,34 @@
+@use "vars" as *;
+
+// 卡片表面：深色底 + 細邊框 + 圓角。重複在 specimen/table/preview/card/stats 等 7+ 處。
+@mixin surface($radius: 10px) {
+  background: var(--mono-surface);
+  border: 1px solid $border-card;
+  border-radius: $radius;
+}
+
+// 直向「上下對齊」的色票/徽章內容排版，重複在 swatch/status-sw/pill。
+@mixin stack-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// 小圓點（badge / sidebar meta / meta-pill 的 ::before）。
+@mixin dot($size: 6px, $bg: var(--primary-400)) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $bg;
+}
+
+// 響應式斷點。用法：@include bp(lg) { ... }
+@mixin bp($name) {
+  @if $name == lg {
+    @media (max-width: $bp-lg) { @content; }
+  } @else if $name == sm {
+    @media (max-width: $bp-sm) { @content; }
+  } @else {
+    @error "Unknown breakpoint: #{$name}";
+  }
+}

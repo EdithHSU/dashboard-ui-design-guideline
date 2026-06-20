@@ -1,0 +1,68 @@
+// 設計 token —— 維持 CSS 自訂屬性（runtime 可切換，淺色模式靠它）。
+:root {
+  /* Brand */
+  --primary-200: #B7FCC4;
+  --primary-300: #8ED99D;
+  --primary-400: #55D877;
+  --primary-500: #109D52;
+  --primary-600: #057C49;
+  --primary-700: #005933;
+
+  --secondary-200: #EEFCA9;
+  --secondary-300: #D1E58C;
+  --secondary-400: #ABCC4D;
+  --secondary-500: #678542;
+  --secondary-600: #466234;
+  --secondary-700: #364F21;
+
+  /* Mono */
+  --mono-bg: #323030;
+  --mono-surface: #3F3E3E;
+  --mono-surface-2: #282727;
+
+  /* Neutral */
+  --neutral-200: #AFB4AE;
+  --neutral-300: #868C84;
+  --neutral-400: #6A6A6A;
+  --neutral-500: #7A7A7A;
+
+  /* Semantic */
+  --success-400: #0DB939;
+  --success-800: #3B4D3D;
+  --warning-400: #EFC313;
+  --warning-800: #6B581A;
+  --error-400: #ED5355;
+  --error-800: #5E3031;
+  --info-400: #1F78AD;
+  --info-800: #21475F;
+  --disabled-200: #D7DBE0;
+  --disabled-400: #969BA0;
+  --disabled-800: #565A5E;
+
+  /* Chart */
+  --chart-1: #057C49;
+  --chart-2: #BCD771;
+  --chart-3: #466234;
+  --chart-4: #57908B;
+  --chart-5: #304E4B;
+
+  /* Layout */
+  --shell-bg: #323030;
+  --shell-fg: #FFFFFF;
+  --shell-muted: #AFB4AE;
+
+  /* Spacing scale (8px system) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+  --sp-6: 40px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 80px;
+
+  --font-tc: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  --font-en: "Roboto", system-ui, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, monospace;
+}

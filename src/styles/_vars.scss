@@ -1,0 +1,23 @@
+// 編譯期 SCSS 變數：收斂「非設計 token」的硬寫死值。
+// 注意：品牌/語意色的「真正 token」仍以 CSS 自訂屬性放在 _tokens.scss，
+// 這裡的色票只是給 rgba() 計算半透明陰影/底色用的編譯期常數。
+
+// 邊框
+$border-card: #4a4848;   // 卡片/表格分隔線
+$border-shell: #1a1919;  // 外殼（sidebar/topbar/hero）分隔線
+
+// 圓角
+$radius-pill: 999px;
+
+// 給 rgba() 用的色票（對應 _tokens 的同名 CSS 變數值）
+$c-primary: #55d877;     // --primary-400
+$c-primary-300: #8ed99d; // --primary-300
+$c-success: #0db939;
+$c-warning: #efc313;
+$c-error: #ed5355;
+$c-info: #1f78ad;
+$c-disabled: #969ba0;
+
+// 斷點
+$bp-lg: 1100px;
+$bp-sm: 760px;

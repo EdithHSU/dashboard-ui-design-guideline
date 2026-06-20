@@ -1,0 +1,15 @@
+@use "mixins" as *;
+
+/* responsive — 放最後以保留與原始相同的串接順序 */
+@include bp(lg) {
+  .specimen-grid, .token-grid, .cards, .stats { grid-template-columns: repeat(2, 1fr); }
+  .state-grid { grid-template-columns: repeat(2, 1fr); }
+  .swatch-row { grid-template-columns: repeat(3, 1fr); }
+}
+
+@include bp(sm) {
+  .app { grid-template-columns: 1fr; }
+  .sidebar { position: relative; height: auto; }
+  .content { padding: 32px 20px; }
+  .topbar { padding: 14px 20px; }
+}

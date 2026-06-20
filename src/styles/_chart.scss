@@ -1,0 +1,49 @@
+@use "vars" as *;
+
+/* chart legend */
+.chart-strip {
+  display: flex;
+  align-items: stretch;
+  height: 64px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  > div {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-en);
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 500;
+  }
+}
+
+/* mode tag */
+.mode-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-family: var(--font-en);
+  text-transform: uppercase;
+  color: var(--neutral-400);
+  margin-bottom: 8px;
+}
+
+/* Light mode swatches preview area */
+.lightmode-shell {
+  background: #F7F7F7;
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 16px;
+  color: #393B45;
+  border: 1px solid $border-card;
+
+  .swatch .label,
+  .swatch .hex { color: #1a1a1a; }
+
+  h3 { color: #393B45; margin: 0 0 18px; font-size: 18px; }
+  .subgroup-label { color: #6A7488; }
+}
