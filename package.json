@@ -1,0 +1,21 @@
+{
+  "name": "dashboard-ui-design-guideline",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "鐵路雲系統介面 · 設計規範閱覽平台",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.2.1",
+    "babel-plugin-transform-react-pug": "7.0.1",
+    "vite": "4.5.3"
+  }
+}
