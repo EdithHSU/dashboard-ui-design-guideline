@@ -10,6 +10,11 @@ import TypePage from "./pages/TypePage.jsx";
 import SpacingPage from "./pages/SpacingPage.jsx";
 import GridPage from "./pages/GridPage.jsx";
 import ComponentsPage from "./pages/ComponentsPage.jsx";
+import ButtonPage from "./pages/ButtonPage.jsx";
+import FormFieldPage from "./pages/FormFieldPage.jsx";
+import BadgePage from "./pages/BadgePage.jsx";
+import CardPage from "./pages/CardPage.jsx";
+import StatusPage from "./pages/StatusPage.jsx";
 
 // id → 頁面元件對照表，取代原本一長串的條件渲染。
 const PAGES = {
@@ -22,6 +27,11 @@ const PAGES = {
   spacing: SpacingPage,
   grid: GridPage,
   components: ComponentsPage,
+  "comp-button": ButtonPage,
+  "comp-field": FormFieldPage,
+  "comp-badge": BadgePage,
+  "comp-card": CardPage,
+  "comp-status": StatusPage,
 };
 
 export default function App() {

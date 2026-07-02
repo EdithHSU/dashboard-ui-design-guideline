@@ -22,7 +22,12 @@ export const NAV = [
   {
     label: "Components",
     items: [
-      { id: "components", num: "08", label: "元件範例" },
+      { id: "components", num: "08", label: "元件總覽" },
+      { id: "comp-button", num: "09", label: "按鈕" },
+      { id: "comp-field", num: "10", label: "表單欄位" },
+      { id: "comp-badge", num: "11", label: "狀態徽章" },
+      { id: "comp-card", num: "12", label: "卡片" },
+      { id: "comp-status", num: "13", label: "項目狀態" },
     ],
   },
 ];

@@ -1,0 +1,86 @@
+@use "vars" as *;
+@use "mixins" as *;
+
+/* ───────── Component documentation ───────── */
+.guideline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include surface(10px);
+  overflow: hidden;
+
+  li {
+    position: relative;
+    padding: 16px 28px 16px 44px;
+    border-bottom: 1px solid $border-card;
+    color: var(--neutral-200);
+    font-size: 14px;
+    line-height: 1.75;
+
+    &:last-child { border-bottom: 0; }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 24px;
+      top: 22px;
+      @include dot(6px, var(--primary-300));
+    }
+  }
+}
+
+.spec-table {
+  @include surface(10px);
+  overflow: hidden;
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 160px 180px 1fr;
+  align-items: center;
+  padding: 16px 28px;
+  border-bottom: 1px solid $border-card;
+  font-size: 14px;
+
+  &:last-child { border-bottom: 0; }
+
+  &.head {
+    background: var(--mono-surface-2);
+    color: var(--neutral-300);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 12px 28px;
+    text-transform: uppercase;
+    font-family: var(--font-en);
+  }
+
+  .token {
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .val {
+    font-family: var(--font-en);
+    color: var(--primary-300);
+  }
+
+  .note {
+    color: var(--neutral-300);
+    font-size: 13px;
+  }
+}
+
+/* ───────── Component preview area ───────── */
+.preview {
+  @include surface(12px);
+  background-color: var(--mono-800);
+  padding: 40px;
+  margin-top: 16px;
+}
+
+.preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}

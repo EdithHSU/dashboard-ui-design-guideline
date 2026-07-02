@@ -11,9 +11,6 @@ export default function Sidebar({ active, onNav }) {
           div
             .name 鐵路雲平台
             .ver DESIGN GUIDELINE · v2.0
-        .meta
-          span.dot
-          | 系統介面設計規範
       each group in NAV
         .nav-group(key=group.label)
           .nav-group-label= group.label

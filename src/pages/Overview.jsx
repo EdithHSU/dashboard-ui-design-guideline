@@ -14,7 +14,7 @@ const CARDS = [
   { id: "spacing", ico: "06", h3: "間距與網格", en: "Spacing · Grid", p: "以 8px 為基礎倍數的間距，搭配 12 欄響應式網格，讓畫面節奏一致。" },
   { id: "states", ico: "03", h3: "互動狀態", en: "Interactive States", p: "Default、Hover、Selected、Focus 與 Disabled 的選色邏輯，傳達清晰反饋。" },
   { id: "chart", ico: "04", h3: "圖表顏色", en: "Chart Color", p: "專為資料視覺化設計的色彩組合，支援預設與進階兩種選色策略。" },
-  { id: "components", ico: "08", h3: "元件範例", en: "Components", p: "套用上述規範後產出的標準元件 — 按鈕、輸入、徽章與狀態提示。" },
+  { id: "components", ico: "08", h3: "元件總覽", en: "Components", p: "按鈕、表單欄位、狀態徽章與卡片 — 各含展示、使用規範、可用性與規格。" },
 ];
 
 export default function Overview({ onNav }) {

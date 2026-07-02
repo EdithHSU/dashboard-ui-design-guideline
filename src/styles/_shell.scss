@@ -16,6 +16,18 @@
   height: 100vh;
   overflow-y: auto;
   padding: 32px 0;
+
+  /* 滾軸採低對比細線設計，僅作為輔助提示，不搶主要導覽視覺 */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(59, 59, 59) transparent;
+
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(59, 59, 59);
+    border-radius: $radius-pill;
+  }
 }
 
 .sidebar-brand {

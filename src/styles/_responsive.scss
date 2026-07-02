@@ -5,6 +5,7 @@
   .specimen-grid, .token-grid, .cards, .stats { grid-template-columns: repeat(2, 1fr); }
   .state-grid { grid-template-columns: repeat(2, 1fr); }
   .swatch-row { grid-template-columns: repeat(3, 1fr); }
+  .spec-row { grid-template-columns: 120px 140px 1fr; }
 }
 
 @include bp(sm) {

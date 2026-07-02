@@ -13,4 +13,11 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      // Bootstrap 內部使用了已棄用的 Sass 顏色函式，quietDeps 只隱藏
+      // 第三方套件（node_modules）發出的棄用警告，不影響自身程式碼的檢查。
+      scss: { quietDeps: true },
+    },
+  },
 });

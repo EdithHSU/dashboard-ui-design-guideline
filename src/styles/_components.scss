@@ -1,20 +1,7 @@
 @use "vars" as *;
 @use "mixins" as *;
 
-/* ───────── Component preview area ───────── */
-.preview {
-  @include surface(12px);
-  padding: 40px;
-  margin-top: 16px;
-}
-
-.preview-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-}
-
+/* ───────── Components ───────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -94,4 +81,128 @@
   &-error { background: rgba($c-error, 0.12); color: var(--error-400); }
   &-info { background: rgba($c-info, 0.18); color: #6CB7E0; }
   &-disabled { background: rgba($c-disabled, 0.18); color: var(--disabled-400); }
+}
+
+/* card */
+.comp-card {
+  background: var(--mono-surface-2);
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 200px;
+  border: 1px solid $border-card;
+
+  .label {
+    font-size: 12px;
+    color: var(--neutral-300);
+    letter-spacing: 0.04em;
+  }
+
+  .value {
+    font-family: var(--font-en);
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 6px;
+  }
+}
+
+/* status */
+.status-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+}
+
+.grid-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grid-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral-300);
+
+  &::before {
+    content: "-";
+  }
+}
+
+/* 兩欄並排：每排 2 張卡片，寬度平分並填滿容器 */
+.status-card-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.status-card {
+  @include surface(6px);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  .status-card-label { font-size: 16px; color: var(--neutral-300); font-weight: 500; }
+
+  /* 實心強調樣式：整卡填色，數值放大加粗 */
+  &.filled {
+    border-color: transparent;
+
+    .status-card-label { color: #fff; font-weight: 700; }
+    .status-card-value { font-family: var(--font-en); font-size: 22px; font-weight: 700; }
+
+    &.success { background: var(--success-800); .status-card-value { color: var(--success-400); } }
+    &.warn { background: var(--warning-800); .status-card-value { color: var(--warning-400); } }
+    &.error { background: var(--error-800); .status-card-value { color: var(--error-400); } }
+  }
+
+  /* 動作樣式：標題另起一行，下方接內容列與詳細連結 */
+  &.action {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+}
+
+.status-card-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem
+}
+
+.status-card-text { font-size: 15px; color: #fff; font-weight: 500; }
+
+/* 基本樣式的語意色膠囊，用來標示單一狀態值 */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: $radius-pill;
+  font-size: 16px;
+  font-weight: 600;
+
+  &.success { background: var(--success-800); color: var(--success-400); }
+  &.warn { background: var(--warning-800); color: var(--warning-400); }
+  &.error { background: var(--error-800); color: var(--error-400); }
+}
+
+.status-card-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 10px;
+  border-radius: $radius-pill;
+  background: var(--mono-500);
+  color: var(--neutral-200);
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+
+  .chevron { font-size: 14px; line-height: 1; color: var(--neutral-300); }
 }

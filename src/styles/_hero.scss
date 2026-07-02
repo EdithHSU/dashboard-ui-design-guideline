@@ -19,7 +19,7 @@
 
   .h1-en {
     font-family: var(--font-en);
-    color: var(--neutral-300);
+    color: var(--neutral-200);
     font-weight: 400;
     margin-left: 12px;
     font-size: 26px;
@@ -73,17 +73,18 @@
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 6px;
-    color: var(--neutral-200);
+    color: #fff;
     letter-spacing: 0.01em;
 
     .en {
       margin-left: 8px;
       color: var(--neutral-200);
+      font-weight: 400;
     }
   }
 
   .sub {
-    color: #fff;
+    color: var(--neutral-200);
     line-height: 1.85;
     font-size: 15px;
     max-width: 880px;

@@ -15,10 +15,15 @@
   --secondary-600: #466234;
   --secondary-700: #364F21;
 
+  --mono-500: #545454;
+  --mono-600: #3F3E3E;
+  --mono-700: #323030;
+  --mono-800: #282727;
+
   /* Mono */
-  --mono-bg: #323030;
-  --mono-surface: #3F3E3E;
-  --mono-surface-2: #282727;
+  --mono-bg: var(--mono-700);
+  --mono-surface: var(--mono-600);
+  --mono-surface-2: var(--mono-800);
 
   /* Neutral */
   --neutral-200: #AFB4AE;
@@ -47,9 +52,9 @@
   --chart-5: #304E4B;
 
   /* Layout */
-  --shell-bg: #323030;
+  --shell-bg: var(--mono-700);
   --shell-fg: #FFFFFF;
-  --shell-muted: #AFB4AE;
+  --shell-muted: var(--neutral-200);
 
   /* Spacing scale (8px system) */
   --sp-1: 4px;

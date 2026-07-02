@@ -1,0 +1,3 @@
+// 僅引入 Bootstrap 工具類別（d-flex、gap-*、m-*/p-* 等），
+// 不含 reboot 與元件樣式，避免覆蓋既有的深色設計系統。
+@use "bootstrap/scss/bootstrap-utilities";
