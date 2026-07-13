@@ -18,7 +18,7 @@
   }
 
   .desc {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--neutral-200);
     margin-bottom: 12px;
   }
@@ -40,14 +40,14 @@
   cursor: copy;
 
   .lbl { font-weight: 500; }
-  .hx { text-align: right; font-size: 11px; opacity: 0.95; }
+  .hx { text-align: right; font-size: 12px; opacity: 0.95; }
 }
 
 /* state pills */
 .state-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 8px; }
 
 .state-card {
-  .label { font-size: 13px; color: var(--neutral-300); font-weight: 500; font-family: var(--font-en); margin-bottom: 4px; }
+  .label { font-size: 14px; color: var(--neutral-300); font-weight: 500; font-family: var(--font-en); margin-bottom: 4px; }
   .desc { font-size: 12px; color: var(--neutral-200); margin-bottom: 12px; line-height: 1.5; min-height: 36px; }
 
   .pill {
@@ -56,6 +56,6 @@
     height: 60px;
     @include stack-between;
     font-family: var(--font-en);
-    font-size: 11px;
+    font-size: 12px;
   }
 }

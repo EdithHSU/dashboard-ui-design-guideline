@@ -43,7 +43,7 @@ export default function StatesPage() {
               .label= s.label
               .desc= s.desc
               .pill(style={ background: s.hex, color: (s.hex.startsWith("#") && isHexLight(s.hex)) ? "#1a1a1a" : "#fff" })
-                span(style={ fontSize: 11, fontWeight: 500 })= s.token
-                span(style={ fontSize: 11, textAlign: "right", opacity: 0.95 })= s.hex.toUpperCase()
+                span(style={ fontSize: 12, fontWeight: 500 })= s.token
+                span(style={ fontSize: 12, textAlign: "right", opacity: 0.95 })= s.hex.toUpperCase()
   `;
 }

@@ -14,7 +14,7 @@
     padding: 16px 28px 16px 44px;
     border-bottom: 1px solid $border-card;
     color: var(--neutral-200);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.75;
 
     &:last-child { border-bottom: 0; }
@@ -23,10 +23,29 @@
       content: "";
       position: absolute;
       left: 24px;
-      top: 22px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
       @include dot(6px, var(--primary-300));
     }
   }
+
+}
+
+.guideline-group + .guideline-group {
+  margin-top: 20px;
+}
+
+/* 分組標題：獨立於清單之外，沿用規格表表頭（.spec-row.head）的色帶樣式 */
+.guideline-heading {
+  padding: 12px 0;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  color: var(--shell-fg);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .spec-table {
@@ -66,7 +85,7 @@
 
   .note {
     color: var(--neutral-300);
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -83,4 +102,50 @@
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
+}
+
+/* ───────── Showcase tabs ───────── */
+.showcase-tabs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid $border-card;
+}
+
+.showcase-tab {
+  padding: 8px 2px 12px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral-300);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+
+  &:hover { color: var(--neutral-200); }
+
+  &.active {
+    color: #fff;
+    border-bottom-color: var(--primary-400);
+  }
+}
+
+/* ───────── Interactive playground（樣式變數即時操作） ───────── */
+.playground {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.playground-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.playground-preview {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
 }

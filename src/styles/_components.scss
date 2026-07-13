@@ -44,7 +44,7 @@
   gap: 6px;
   max-width: 320px;
 
-  label { font-size: 13px; color: var(--neutral-200); }
+  label { font-size: 14px; color: var(--neutral-200); }
 
   input, select {
     background: var(--mono-surface-2);
@@ -146,6 +146,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  min-width: 280px;
 
   .status-card-label { font-size: 16px; color: var(--neutral-300); font-weight: 500; }
 
@@ -154,7 +155,7 @@
     border-color: transparent;
 
     .status-card-label { color: #fff; font-weight: 700; }
-    .status-card-value { font-family: var(--font-en); font-size: 22px; font-weight: 700; }
+    .status-card-value { font-family: var(--font-en); font-size: 24px; font-weight: 700; }
 
     &.success { background: var(--success-800); .status-card-value { color: var(--success-400); } }
     &.warn { background: var(--warning-800); .status-card-value { color: var(--warning-400); } }
@@ -176,7 +177,7 @@
   gap: 1rem
 }
 
-.status-card-text { font-size: 15px; color: #fff; font-weight: 500; }
+.status-card-text { font-size: 16px; color: #fff; font-weight: 500; }
 
 /* 基本樣式的語意色膠囊，用來標示單一狀態值 */
 .status-pill {

@@ -17,9 +17,17 @@ export default function ComponentDocLayout({ meta, usage, a11y, specs, showcase,
           = showcase
       .section
         SectionHead(zh="使用規範" en="Usage Guidelines")
-        ul.guideline-list
+        if usage[0] && usage[0].heading
           each item in usage
-            li(key=item)= item
+            .guideline-group(key=item.heading)
+              .guideline-heading= item.heading
+              ul.guideline-list
+                each sub in item.items
+                  li(key=sub)= sub
+        else
+          ul.guideline-list
+            each item in usage
+              li(key=item)= item
       .section
         SectionHead(zh="可用性規範" en="Accessibility")
         ul.guideline-list

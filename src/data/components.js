@@ -96,7 +96,7 @@ export const FIELD_DOC = {
   ],
   specs: [
     { token: "欄位最大寬度", value: "320px", note: "單欄表單預設" },
-    { token: "Label 字級", value: "13px", note: "neutral-200" },
+    { token: "Label 字級", value: "14px", note: "neutral-200" },
     { token: "Label → 輸入間距", value: "6px", note: "field gap" },
     { token: "輸入內距", value: "10px 12px", note: "上下 × 左右" },
     { token: "輸入字級", value: "14px", note: "Noto Sans TC" },
@@ -187,11 +187,28 @@ export const STATUS_DOC = {
     desc: "項目狀態用於表現某一主題類別下，單一或數個項目之內容展現‧提供顯示內容之狀態標籤、值、燈號，以快速強調資訊重點與比較項目差異。",
   },
   usage: [
-    "基本樣式（外框 + 語意色膠囊）用於單純標示單一狀態值，適合列表中並排比較。",
-    "實心樣式（filled）用於需要特別強調的單一重點狀態，整卡填語意底色，數值加大加粗。",
-    "動作樣式（action）用於狀態之外還需提供後續操作或連結，標題另起一行、內容與「詳細」連結並排。",
-    "同一畫面中語意色應一致：success 表正常、warn 表警示、error 表異常。",
-    "卡片群組垂直排列時間距使用 16px（spacing-2）。",
+    {
+      heading: "- 最佳使用情境",
+      items: [
+        "呈現單一項目裡不同種類的複數資訊。",
+        "使用 CTA 外連詳細資訊內容，保持區塊的內容整潔易讀。",
+        "需於畫面中強調的靜態純文字內容。",
+      ],
+    },
+    {
+      heading: "- 在以下情況下應使用項目狀態",
+      items: [
+        "項目內的資訊種類繁雜。",
+        "文字公告內容。",
+      ],
+    },
+    {
+      heading: "- 在以下情況下不應使用項目狀態",
+      items: [
+        "項目內容單一，若只需顯示狀態請使用「狀態徽章」元件。",
+        "擁有數個項目，若有數個項目對應數個資訊種類建議使用表格呈現。",
+      ],
+    },
   ],
   a11y: [
     "狀態膠囊與實心樣式的數值不可僅依賴顏色傳達，須搭配文字標籤（如「正常」「警示」）。",
@@ -205,10 +222,10 @@ export const STATUS_DOC = {
     { token: "圓角", value: "10px", note: "radius/md 與 lg 之間" },
     { token: "邊框", value: "1px #4a4848", note: "border-card，filled 樣式無邊框" },
     { token: "膠囊內距", value: "10px 22px", note: "status-pill，圓角 999px" },
-    { token: "標題字級", value: "14px / 500", note: "neutral-300；filled 樣式改為白色 700" },
-    { token: "膠囊字級", value: "15px / 600", note: "status-pill" },
-    { token: "數值字級", value: "22px / 700", note: "status-card-value，Roboto" },
-    { token: "詳細連結", value: "13px", note: "status-card-chip，圓角 999px" },
+    { token: "標題字級", value: "16px / 500", note: "neutral-300；filled 樣式改為白色 700" },
+    { token: "膠囊字級", value: "16px / 600", note: "status-pill" },
+    { token: "數值字級", value: "24px / 700", note: "status-card-value，Roboto" },
+    { token: "詳細連結", value: "14px", note: "status-card-chip，圓角 999px" },
     { token: "卡片間距", value: "16px", note: "status-card-grid 垂直 gap" },
   ],
 };

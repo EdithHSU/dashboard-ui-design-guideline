@@ -14,7 +14,7 @@
   padding: 28px 24px;
 
   .meta {
-    font-size: 11px;
+    font-size: 12px;
     font-family: var(--font-en);
     color: var(--neutral-300);
     letter-spacing: 0.1em;
@@ -38,7 +38,7 @@
   }
 
   .desc {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--neutral-200);
     line-height: 1.7;
     margin: 0 0 12px;
@@ -79,6 +79,6 @@
     color: #fff;
   }
 
-  .name { font-family: var(--font-tc); color: var(--neutral-200); font-size: 13px; }
-  .val { color: var(--neutral-200); font-size: 13px; }
+  .name { font-family: var(--font-tc); color: var(--neutral-200); font-size: 14px; }
+  .val { color: var(--neutral-200); font-size: 14px; }
 }
